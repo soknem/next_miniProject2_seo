@@ -1,0 +1,1682 @@
+{
+	"info": {
+		"_postman_id": "9a6162de-bb50-402d-a175-7aaa4a97eeea",
+		"name": "ISTAD-Ecommerce-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18145013"
+	},
+	"item": [
+		{
+			"name": "upload image",
+			"item": [
+				{
+					"name": "brand_image",
+					"item": [
+						{
+							"name": "Get All Images",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://store.istad.co/api/file/brand/",
+									"protocol": "https",
+									"host": [
+										"store",
+										"istad",
+										"co"
+									],
+									"path": [
+										"api",
+										"file",
+										"brand",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Image By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://store.istad.co/api/file/brand/1/",
+									"protocol": "https",
+									"host": [
+										"store",
+										"istad",
+										"co"
+									],
+									"path": [
+										"api",
+										"file",
+										"brand",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Upload Brand Image",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzExNzgyMDE1LCJpYXQiOjE3MTE3Nzg5MDIsImp0aSI6IjAzYjY2NTVlMDVmZTRjOTliODNhYTAwNDQwMzYwODQ3IiwidXNlcl9pZCI6MX0.ROAdK1HSXUDzxzB6DzUQc143eowigvYW2YAe2ucQ7xc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "ISTAD Store Poster",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/sangs/Pictures/Screenshots/Screenshot 2024-02-22 160947.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://store.istad.co/api/file/brand/",
+									"protocol": "https",
+									"host": [
+										"store",
+										"istad",
+										"co"
+									],
+									"path": [
+										"api",
+										"file",
+										"brand",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Image By Id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzExNzgyMDE1LCJpYXQiOjE3MTE3Nzg5MDIsImp0aSI6IjAzYjY2NTVlMDVmZTRjOTliODNhYTAwNDQwMzYwODQ3IiwidXNlcl9pZCI6MX0.ROAdK1HSXUDzxzB6DzUQc143eowigvYW2YAe2ucQ7xc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Student in exam",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/sangs/Pictures/Screenshots/Screenshot 2024-02-22 160947.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://store.istad.co/api/file/brand/1/",
+									"protocol": "https",
+									"host": [
+										"store",
+										"istad",
+										"co"
+									],
+									"path": [
+										"api",
+										"file",
+										"brand",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Partial Update By Id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzExNzgyMzgzLCJpYXQiOjE3MTE3Nzg5MDIsImp0aSI6ImMwNTgzYTQwNjZiNTQyZmU5ZmEzNmM5MzhmMDQ5ZGU0IiwidXNlcl9pZCI6MX0.3jwOwBI6hn5SsFWbPIzgFy0Dc80lZVGmhNeYRrcKyOY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "studying vs exam",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://store.istad.co/api/file/brand/1/",
+									"protocol": "https",
+									"host": [
+										"store",
+										"istad",
+										"co"
+									],
+									"path": [
+										"api",
+										"file",
+										"brand",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete By Id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzExNzgyMzgzLCJpYXQiOjE3MTE3Nzg5MDIsImp0aSI6ImMwNTgzYTQwNjZiNTQyZmU5ZmEzNmM5MzhmMDQ5ZGU0IiwidXNlcl9pZCI6MX0.3jwOwBI6hn5SsFWbPIzgFy0Dc80lZVGmhNeYRrcKyOY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://store.istad.co/api/file/brand/1/",
+									"protocol": "https",
+									"host": [
+										"store",
+										"istad",
+										"co"
+									],
+									"path": [
+										"api",
+										"file",
+										"brand",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "category_image",
+					"item": [
+						{
+							"name": "Get All Images",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://store.istad.co/api/file/category/",
+									"protocol": "https",
+									"host": [
+										"store",
+										"istad",
+										"co"
+									],
+									"path": [
+										"api",
+										"file",
+										"category",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Image By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://store.istad.co/api/file/category/1/",
+									"protocol": "https",
+									"host": [
+										"store",
+										"istad",
+										"co"
+									],
+									"path": [
+										"api",
+										"file",
+										"category",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Upload Image",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzExNzgyMDE1LCJpYXQiOjE3MTE3Nzg5MDIsImp0aSI6IjAzYjY2NTVlMDVmZTRjOTliODNhYTAwNDQwMzYwODQ3IiwidXNlcl9pZCI6MX0.ROAdK1HSXUDzxzB6DzUQc143eowigvYW2YAe2ucQ7xc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "ISTAD Store Poster",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/sangs/Pictures/Screenshots/Screenshot 2024-02-22 160947.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://store.istad.co/api/file/brand/",
+									"protocol": "https",
+									"host": [
+										"store",
+										"istad",
+										"co"
+									],
+									"path": [
+										"api",
+										"file",
+										"brand",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Image By Id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzExNzgyMDE1LCJpYXQiOjE3MTE3Nzg5MDIsImp0aSI6IjAzYjY2NTVlMDVmZTRjOTliODNhYTAwNDQwMzYwODQ3IiwidXNlcl9pZCI6MX0.ROAdK1HSXUDzxzB6DzUQc143eowigvYW2YAe2ucQ7xc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Student in exam",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/sangs/Pictures/Screenshots/Screenshot 2024-02-22 160947.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://store.istad.co/api/file/category/1/",
+									"protocol": "https",
+									"host": [
+										"store",
+										"istad",
+										"co"
+									],
+									"path": [
+										"api",
+										"file",
+										"category",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Partial Update By Id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzExNzgyMzgzLCJpYXQiOjE3MTE3Nzg5MDIsImp0aSI6ImMwNTgzYTQwNjZiNTQyZmU5ZmEzNmM5MzhmMDQ5ZGU0IiwidXNlcl9pZCI6MX0.3jwOwBI6hn5SsFWbPIzgFy0Dc80lZVGmhNeYRrcKyOY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "studying vs exam",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://store.istad.co/api/file/category/1/",
+									"protocol": "https",
+									"host": [
+										"store",
+										"istad",
+										"co"
+									],
+									"path": [
+										"api",
+										"file",
+										"category",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete By Id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzExNzgyODY1LCJpYXQiOjE3MTE3Nzg5MDIsImp0aSI6IjMyNDI1YzY4NDc5YTRhOWE4YTE3YzcxZWIyZGE2ZGVkIiwidXNlcl9pZCI6MX0.tBOEjz1mgQ8TGozpOkdM8F4cWzb0lMVKQPbeG2_c9vs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://store.istad.co/api/file/category/2/",
+									"protocol": "https",
+									"host": [
+										"store",
+										"istad",
+										"co"
+									],
+									"path": [
+										"api",
+										"file",
+										"category",
+										"2",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "product_image",
+					"item": [
+						{
+							"name": "Get All Images",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://store.istad.co/api/file/product/",
+									"protocol": "https",
+									"host": [
+										"store",
+										"istad",
+										"co"
+									],
+									"path": [
+										"api",
+										"file",
+										"product",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Image By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://store.istad.co/api/file/product/1/",
+									"protocol": "https",
+									"host": [
+										"store",
+										"istad",
+										"co"
+									],
+									"path": [
+										"api",
+										"file",
+										"product",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Upload Image",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzExNzgyMDE1LCJpYXQiOjE3MTE3Nzg5MDIsImp0aSI6IjAzYjY2NTVlMDVmZTRjOTliODNhYTAwNDQwMzYwODQ3IiwidXNlcl9pZCI6MX0.ROAdK1HSXUDzxzB6DzUQc143eowigvYW2YAe2ucQ7xc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "ISTAD Store Poster",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/sangs/Pictures/Screenshots/Screenshot 2024-02-22 160947.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://store.istad.co/api/file/product/",
+									"protocol": "https",
+									"host": [
+										"store",
+										"istad",
+										"co"
+									],
+									"path": [
+										"api",
+										"file",
+										"product",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Image By Id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzExNzgyMDE1LCJpYXQiOjE3MTE3Nzg5MDIsImp0aSI6IjAzYjY2NTVlMDVmZTRjOTliODNhYTAwNDQwMzYwODQ3IiwidXNlcl9pZCI6MX0.ROAdK1HSXUDzxzB6DzUQc143eowigvYW2YAe2ucQ7xc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Student in exam",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/sangs/Pictures/Screenshots/Screenshot 2024-02-22 160947.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://store.istad.co/api/file/product/1/",
+									"protocol": "https",
+									"host": [
+										"store",
+										"istad",
+										"co"
+									],
+									"path": [
+										"api",
+										"file",
+										"product",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Partial Update By Id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzExNzgyMzgzLCJpYXQiOjE3MTE3Nzg5MDIsImp0aSI6ImMwNTgzYTQwNjZiNTQyZmU5ZmEzNmM5MzhmMDQ5ZGU0IiwidXNlcl9pZCI6MX0.3jwOwBI6hn5SsFWbPIzgFy0Dc80lZVGmhNeYRrcKyOY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "studying vs exam",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://store.istad.co/api/file/product/1/",
+									"protocol": "https",
+									"host": [
+										"store",
+										"istad",
+										"co"
+									],
+									"path": [
+										"api",
+										"file",
+										"product",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete By Id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzExNzgyODY1LCJpYXQiOjE3MTE3Nzg5MDIsImp0aSI6IjMyNDI1YzY4NDc5YTRhOWE4YTE3YzcxZWIyZGE2ZGVkIiwidXNlcl9pZCI6MX0.tBOEjz1mgQ8TGozpOkdM8F4cWzb0lMVKQPbeG2_c9vs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://store.istad.co/api/file/product/1/",
+									"protocol": "https",
+									"host": [
+										"store",
+										"istad",
+										"co"
+									],
+									"path": [
+										"api",
+										"file",
+										"product",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "icon_image",
+					"item": [
+						{
+							"name": "Get All Images",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://store.istad.co/api/file/icon/",
+									"protocol": "https",
+									"host": [
+										"store",
+										"istad",
+										"co"
+									],
+									"path": [
+										"api",
+										"file",
+										"icon",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Image By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://store.istad.co/api/file/icon/1/",
+									"protocol": "https",
+									"host": [
+										"store",
+										"istad",
+										"co"
+									],
+									"path": [
+										"api",
+										"file",
+										"icon",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Upload Image",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzExNzgyMDE1LCJpYXQiOjE3MTE3Nzg5MDIsImp0aSI6IjAzYjY2NTVlMDVmZTRjOTliODNhYTAwNDQwMzYwODQ3IiwidXNlcl9pZCI6MX0.ROAdK1HSXUDzxzB6DzUQc143eowigvYW2YAe2ucQ7xc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "ISTAD Store Poster",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/sangs/Pictures/Screenshots/Screenshot 2024-02-22 160947.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://store.istad.co/api/file/icon/",
+									"protocol": "https",
+									"host": [
+										"store",
+										"istad",
+										"co"
+									],
+									"path": [
+										"api",
+										"file",
+										"icon",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Image By Id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzExNzgyMDE1LCJpYXQiOjE3MTE3Nzg5MDIsImp0aSI6IjAzYjY2NTVlMDVmZTRjOTliODNhYTAwNDQwMzYwODQ3IiwidXNlcl9pZCI6MX0.ROAdK1HSXUDzxzB6DzUQc143eowigvYW2YAe2ucQ7xc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Student in exam",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/sangs/Pictures/Screenshots/Screenshot 2024-02-22 160947.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://store.istad.co/api/file/product/1/",
+									"protocol": "https",
+									"host": [
+										"store",
+										"istad",
+										"co"
+									],
+									"path": [
+										"api",
+										"file",
+										"product",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Partial Update By Id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzExNzgyMzgzLCJpYXQiOjE3MTE3Nzg5MDIsImp0aSI6ImMwNTgzYTQwNjZiNTQyZmU5ZmEzNmM5MzhmMDQ5ZGU0IiwidXNlcl9pZCI6MX0.3jwOwBI6hn5SsFWbPIzgFy0Dc80lZVGmhNeYRrcKyOY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "studying vs exam",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://store.istad.co/api/file/icon/1/",
+									"protocol": "https",
+									"host": [
+										"store",
+										"istad",
+										"co"
+									],
+									"path": [
+										"api",
+										"file",
+										"icon",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete By Id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzExNzgyODY1LCJpYXQiOjE3MTE3Nzg5MDIsImp0aSI6IjMyNDI1YzY4NDc5YTRhOWE4YTE3YzcxZWIyZGE2ZGVkIiwidXNlcl9pZCI6MX0.tBOEjz1mgQ8TGozpOkdM8F4cWzb0lMVKQPbeG2_c9vs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://store.istad.co/api/file/icon/1/",
+									"protocol": "https",
+									"host": [
+										"store",
+										"istad",
+										"co"
+									],
+									"path": [
+										"api",
+										"file",
+										"icon",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "category",
+					"item": [
+						{
+							"name": "Get all Categories",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://store.istad.co/api/products/categories/",
+									"protocol": "https",
+									"host": [
+										"store",
+										"istad",
+										"co"
+									],
+									"path": [
+										"api",
+										"products",
+										"categories",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Category By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://store.istad.co/api/products/categories/1/",
+									"protocol": "https",
+									"host": [
+										"store",
+										"istad",
+										"co"
+									],
+									"path": [
+										"api",
+										"products",
+										"categories",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get All Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://store.istad.co/api/products/",
+							"protocol": "https",
+							"host": [
+								"store",
+								"istad",
+								"co"
+							],
+							"path": [
+								"api",
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://store.istad.co/api/products/1/",
+							"protocol": "https",
+							"host": [
+								"store",
+								"istad",
+								"co"
+							],
+							"path": [
+								"api",
+								"products",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzExNzc4ODk2LCJpYXQiOjE3MTE3Nzg1OTYsImp0aSI6ImYzYzMzMzk0YTdjOTQwNDhhYjViZGUzMmJiOTYzNmE5IiwidXNlcl9pZCI6MX0.NRcrUxzd79aQ6mHlofttvWsDu0rqxZyioE8aPUqghiI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"category\": {\r\n    \"name\": \"running shoes\",\r\n    \"icon\": \"https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1693342954-rincon-3-64ee5ca62e001.jpg?crop=1xw:1xh;center,top&resize=980:*\"\r\n  },\r\n  \"name\": \"Running Shoes for Snappy Strides\",\r\n  \"desc\": \"Lightweight running shoes have come a long way as both racing flats and daily trainers. Once upon a time, to shave grams on a shoe and get it down to a competitive weight, brands had to make considerable compromises in comfort and stability—but that’s no longer the case. Thanks to lighter midsole foams and meshy upper materials, some of our favorite supportive and maximally cushioned shoes now sit well below 8 ounces on the scale.\",\r\n  \"image\": \"https://hips.hearstapps.com/hmg-prod/images/hoka-zinal-13085-1643565794.jpg?crop=1.00xw:0.849xh;0,0.151xh&resize=2048:*\",\r\n  \"price\": \"95.25\",\r\n  \"quantity\": 200\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://store.istad.co/api/products/",
+							"protocol": "https",
+							"host": [
+								"store",
+								"istad",
+								"co"
+							],
+							"path": [
+								"api",
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzExNTM1MzIyLCJpYXQiOjE3MTE1MzUwMjIsImp0aSI6IjRlOTk3ZWQ2ZDBmMTRiYWNiNmFhN2U2NzAxNzkwNjkzIiwidXNlcl9pZCI6MX0.ImS_N4Lss_Uq5kDRJxWEKMe38904HULOQ117Uw_t8uo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"category\": {\r\n    \"name\": \"women's clothing\",\r\n    \"icon\": \"https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg\"\r\n  },\r\n  \"name\": \"DANVOUY Womens T Shirt Casual Cotton Short (Updated)\",\r\n  \"desc\": \"95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.\",\r\n  \"image\": \"https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg\",\r\n  \"price\": \"12.99\",\r\n  \"quantity\": 145\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://store.istad.co/api/products/1/",
+							"protocol": "https",
+							"host": [
+								"store",
+								"istad",
+								"co"
+							],
+							"path": [
+								"api",
+								"products",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Partial Update by Id",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Update specific property\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://store.istad.co/api/products/1/",
+							"protocol": "https",
+							"host": [
+								"store",
+								"istad",
+								"co"
+							],
+							"path": [
+								"api",
+								"products",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzExNzc5MjAyLCJpYXQiOjE3MTE3Nzg5MDIsImp0aSI6ImZhOWY1Mzc1YmJhMTQzYzdhN2I5MTA2MzI0YWI2YjMzIiwidXNlcl9pZCI6MX0.tzRQQLv8EWJgfq6EwNcPsF0OCTzUA1w4nI2K_Q3oAdE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://store.istad.co/api/products/32/",
+							"protocol": "https",
+							"host": [
+								"store",
+								"istad",
+								"co"
+							],
+							"path": [
+								"api",
+								"products",
+								"32",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Products with Pagination",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://store.istad.co/api/products/?page=1&page_size=10",
+							"protocol": "https",
+							"host": [
+								"store",
+								"istad",
+								"co"
+							],
+							"path": [
+								"api",
+								"products",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "page_size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "profile",
+					"item": [
+						{
+							"name": "Get Profile",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzExNzc4ODk2LCJpYXQiOjE3MTE3Nzg1OTYsImp0aSI6ImYzYzMzMzk0YTdjOTQwNDhhYjViZGUzMmJiOTYzNmE5IiwidXNlcl9pZCI6MX0.NRcrUxzd79aQ6mHlofttvWsDu0rqxZyioE8aPUqghiI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://store.istad.co/api/user/profile/",
+									"protocol": "https",
+									"host": [
+										"store",
+										"istad",
+										"co"
+									],
+									"path": [
+										"api",
+										"user",
+										"profile",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Profile",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzExNzc4ODk2LCJpYXQiOjE3MTE3Nzg1OTYsImp0aSI6ImYzYzMzMzk0YTdjOTQwNDhhYjViZGUzMmJiOTYzNmE5IiwidXNlcl9pZCI6MX0.NRcrUxzd79aQ6mHlofttvWsDu0rqxZyioE8aPUqghiI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"avatar\": \"https://store.istad.co/media/brand_images/sokea_AF6QosU.jpg\",\r\n  \"bio\": \"when you silence you can hear everything!\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://store.istad.co/api/user/profile/",
+									"protocol": "https",
+									"host": [
+										"store",
+										"istad",
+										"co"
+									],
+									"path": [
+										"api",
+										"user",
+										"profile",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Partial Update",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzExNzc5ODQ5LCJpYXQiOjE3MTE3Nzg5MDIsImp0aSI6IjllNmMyYTkzOGQ4OTQyZTJhYzA3MTA5ODlkNGUzYTAwIiwidXNlcl9pZCI6MX0.Lc8odG4KwwlkzlYkJWTpZ_fUmnCdjp2HnMX33JvsYX0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"bio\": \"Update Bio\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://store.istad.co/api/user/profile/",
+									"protocol": "https",
+									"host": [
+										"store",
+										"istad",
+										"co"
+									],
+									"path": [
+										"api",
+										"user",
+										"profile",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "orders",
+					"item": [
+						{
+							"name": "Get All Orders",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzExNzgzMzY1LCJpYXQiOjE3MTE3Nzg5MDIsImp0aSI6IjU0N2VlOGFiMmNiNDQzOGE5YWJiNTM0YjhiMWFlMTczIiwidXNlcl9pZCI6MX0.lks-HWf7aQXsRbLEgrIWJlH3OdfR9JZMTPCrgFwhND4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://store.istad.co/api/user/orders/",
+									"protocol": "https",
+									"host": [
+										"store",
+										"istad",
+										"co"
+									],
+									"path": [
+										"api",
+										"user",
+										"orders",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Order By Id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzExNzg0MzQyLCJpYXQiOjE3MTE3Nzg5MDIsImp0aSI6IjBmM2JjNGUzNzM5NjQxMGU4YjdmY2M0ZmMwMTA5NWE1IiwidXNlcl9pZCI6MX0.BF7wsElKI0CmXP2SIaIi33PElJeOp0pMVVyzVb0iIwc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://store.istad.co/api/user/orders/1/",
+									"protocol": "https",
+									"host": [
+										"store",
+										"istad",
+										"co"
+									],
+									"path": [
+										"api",
+										"user",
+										"orders",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Orders",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzExNzg0MzQyLCJpYXQiOjE3MTE3Nzg5MDIsImp0aSI6IjBmM2JjNGUzNzM5NjQxMGU4YjdmY2M0ZmMwMTA5NWE1IiwidXNlcl9pZCI6MX0.BF7wsElKI0CmXP2SIaIi33PElJeOp0pMVVyzVb0iIwc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"order_items\": [\r\n    {\r\n      \"product\": 33,\r\n      \"quantity\": 10\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://store.istad.co/api/user/orders/",
+									"protocol": "https",
+									"host": [
+										"store",
+										"istad",
+										"co"
+									],
+									"path": [
+										"api",
+										"user",
+										"orders",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Order By Id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzExNzg0MzQyLCJpYXQiOjE3MTE3Nzg5MDIsImp0aSI6IjBmM2JjNGUzNzM5NjQxMGU4YjdmY2M0ZmMwMTA5NWE1IiwidXNlcl9pZCI6MX0.BF7wsElKI0CmXP2SIaIi33PElJeOp0pMVVyzVb0iIwc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"order_items\": [\r\n    {\r\n      \"product\": 33,\r\n      \"quantity\": 10\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://store.istad.co/api/user/orders/1/",
+									"protocol": "https",
+									"host": [
+										"store",
+										"istad",
+										"co"
+									],
+									"path": [
+										"api",
+										"user",
+										"orders",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Order By Id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzExNzg0ODU1LCJpYXQiOjE3MTE3Nzg5MDIsImp0aSI6IjE5YTIzZjE1NDIzNjQ3OGY5ZDkzNTk2N2Q3MDdlN2U5IiwidXNlcl9pZCI6MX0.qZn_HwRMDrB4yW2LnRXKQIsuM_D4hhZgJLZBi5-vNFw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://store.istad.co/api/user/orders/1/",
+									"protocol": "https",
+									"host": [
+										"store",
+										"istad",
+										"co"
+									],
+									"path": [
+										"api",
+										"user",
+										"orders",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get  Own User Detail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzExNTM1MzIyLCJpYXQiOjE3MTE1MzUwMjIsImp0aSI6IjRlOTk3ZWQ2ZDBmMTRiYWNiNmFhN2U2NzAxNzkwNjkzIiwidXNlcl9pZCI6MX0.ImS_N4Lss_Uq5kDRJxWEKMe38904HULOQ117Uw_t8uo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://store.istad.co/api/user/",
+							"protocol": "https",
+							"host": [
+								"store",
+								"istad",
+								"co"
+							],
+							"path": [
+								"api",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"user-real-email@example.com\",\r\n  \"password1\": \"at-lease-8-charactor\",\r\n  \"password2\": \"at-lease-8-charactor\",\r\n  \"first_name\": \"tony\",\r\n  \"last_name\": \"stark\"\r\n}\r\n//  After registerrf it will send email to confirm to verify email",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://store.istad.co/api/user/register/",
+							"protocol": "https",
+							"host": [
+								"store",
+								"istad",
+								"co"
+							],
+							"path": [
+								"api",
+								"user",
+								"register",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify Email",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"key\": \"MQ:1royKm:iU985HPra9fRVXuzQc7FQAUz_j1Kv8XKf54QmPN--gc\"\r\n}\r\n\r\n// step1: click \"Activate my account\" on email that registered\r\n\r\n// step2: copy key from url. e.g: http://localhost:3000/activate-confirm-email/MQ:1rqQEx:zG3v1H9lWkA4PtxB-CC_bZT68XeX9GszBqir5s6S2Zw/\r\n//        the key is: MQ:1rqQEx:zG3v1H9lWkA4PtxB-CC_bZT68XeX9GszBqir5s6S2Zw\r\n\r\n// step3: pass the key to postman in body { key: key-here} and url https://store.istad.co/account-confirm-email/key-here\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://store.istad.co/account-confirm-email/MQ:1royKm:iU985HPra9fRVXuzQc7FQAUz_j1Kv8XKf54QmPN--gc/",
+							"protocol": "https",
+							"host": [
+								"store",
+								"istad",
+								"co"
+							],
+							"path": [
+								"account-confirm-email",
+								"MQ:1royKm:iU985HPra9fRVXuzQc7FQAUz_j1Kv8XKf54QmPN--gc",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"user@example.com\",\r\n  \"password\": \"at-lease-8-charactor\"\r\n}\r\n\r\n// Access Token Expired in 5mn\r\n// Refresh Token Expired in 1day\r\n\r\n// Use refresh token to request for new access token when access token expired\r\n\r\n// Note: you can't use refresh token to access permissioned resources",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://store.istad.co/api/user/login/",
+							"protocol": "https",
+							"host": [
+								"store",
+								"istad",
+								"co"
+							],
+							"path": [
+								"api",
+								"user",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"refresh\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcxMTg2NTMwMiwiaWF0IjoxNzExNzc4OTAyLCJqdGkiOiJhNjY4NzJjNjlkMDU0MzI2ODc1OGE3NzkyODYxYjNiMCIsInVzZXJfaWQiOjF9.fprkUy-8U8VnTTLFBLDZyQexO_INvoePk5bVxBu10Jc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://store.istad.co/api/token/refresh/",
+							"protocol": "https",
+							"host": [
+								"store",
+								"istad",
+								"co"
+							],
+							"path": [
+								"api",
+								"token",
+								"refresh",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
