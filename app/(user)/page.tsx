@@ -43,11 +43,11 @@ export default function Page() {
   };
 
   return (
-    <div className="flex flex-col items-center bg-cyan-200">
+    <div className="w-full min-h-screen flex flex-col items-center bg-cyan-200">
       <div className="w-full  flex flex-row justify-center mt-2">
         <h1 className="text-[2rem] w-[90%] ">All Products</h1>
       </div>
-      <div className="h-auto py-4 px-2  w-[90%]  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+      <div className="h-auto py-4 px-2  w-[90%]  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4">
         {products.map((product: any, index: number) => (
           <CardProductComponent
             key={index}
@@ -82,6 +82,9 @@ export default function Page() {
             <option value="15">15</option>
             <option value="20">20</option>
             <option value="25">25</option>
+            <option value="30">30</option>
+            <option value="35">35</option>
+            <option value="40">40</option>
             {/* Add more options as needed */}
           </select>
         </div>

@@ -13,8 +13,8 @@ export default function AdminLayout({
     
     <html>
       <body className="bg-gray-200 flex">
-        <aside className="h-screen">
-          <SidebarComponent />
+        <aside className="h-screen sticky top-0 ">
+          <SidebarComponent/>
         </aside>
         <main className="flex-1"> {children}</main>
       </body>

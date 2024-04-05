@@ -39,8 +39,8 @@ function NavbarComponent() {
     <Navbar theme={customTheme.navbar} className="sticky top-0 z-50">
       <NavbarBrand as={Link} href="/">
         <img
-          src="/"
-          className="mr-3 h-6 sm:h-9"
+          src="https://store.istad.co/media/product_images/shool_logo3.png"
+          className="mr-3 h-6 sm:h-9 text-2xl"
           alt="Flowbite React Logo"
         />
         <span className="self-center whitespace-nowrap text-xl font-semibold tracking-widest">
@@ -56,6 +56,7 @@ function NavbarComponent() {
             as={Link}
             href={item.path}
             active={item.active}
+            className="text-xl"
           >
             {item.name}
           </NavbarLink>

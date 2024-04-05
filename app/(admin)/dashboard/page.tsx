@@ -1,37 +1,42 @@
-'use client';
-import React, { useEffect } from "react";
+"use client"
+import React, { useEffect, useState } from "react";
 import DataTable, { TableColumn } from "react-data-table-component";
 import { ProductType } from "@/components/libs/difinition";
-import { useState } from "react";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
-type ProductProp = {
-  image: string;
-  price: number;
-  description: string;
-  id: number;
-};
+
 export default function Dashboard() {
   const [products, setProducts] = useState<ProductType[]>([]);
   const [loading, setLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
+  const [rowsPerPage, setRowsPerPage] = useState(10); // Default rows per page
   const router = useRouter();
-  const url = "https://store.istad.co/api/products/";
+  const url = `https://store.istad.co/api/products/?page=${currentPage}&page_size=${rowsPerPage}`;
+
   useEffect(() => {
+    setLoading(true);
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
         setProducts(data.results);
+        setTotalPages(Math.ceil(data.total / rowsPerPage));
         setLoading(false);
       });
-  }, []);
+  }, [currentPage, rowsPerPage]);
+
   const columns: TableColumn<ProductType>[] = [
     {
       name: "Product Name",
       selector: (row) => row.name,
+      
     },
     {
       name: "Price",
-      selector: (row) => row.price,
+      selector: (row) => `${row.price}$`,
+    },
+    {
+      name: "Quantity",
+      selector: (row) => row.quantity,
     },
     {
       name: "Category",
@@ -70,17 +75,52 @@ export default function Dashboard() {
       ),
     },
   ];
-  const handleView = (product: ProductType) => {router.push(`/${product.id}`)};
-  const handleDelete = (product: ProductType) => {router.push(`/delete/${product.id}`)};
-  const handleUpdate = (product: ProductType) => {router.push(`/update/${product.id}`)};
+
+  const handleView = (product: ProductType) => {
+    router.push(`/${product.id}`);
+  };
+
+  const handleDelete = (product: ProductType) => {
+    router.push(`/delete/${product.id}`);
+  };
+
+  const handleUpdate = (product: ProductType) => {
+    router.push(`/update/${product.id}`);
+  };
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+  };
+
+  const handleRowsPerPageChange = (newRowsPerPage: number) => {
+    setRowsPerPage(newRowsPerPage);
+  };
+  const customStyles = {
+    head: {
+      style: {
+        fontSize: '18px', 
+      },
+    },
+    rows: {
+      style: {
+        fontSize: "16px",
+      },
+    },
+  };
 
   return (
     <div className="w-full h-auto min-h-full ">
       <DataTable
+      customStyles={customStyles}
         columns={columns}
         data={products}
         progressPending={loading}
-        pagination={true}
+        pagination
+        paginationServer
+        paginationTotalRows={totalPages * rowsPerPage}
+        onChangePage={handlePageChange}
+        onChangeRowsPerPage={handleRowsPerPageChange} // Handle rows per page change event
+        paginationRowsPerPageOptions={[10,15, 20,25, 30,35,40]} // Options for rows per page
         pointerOnHover
         highlightOnHover
         striped
