@@ -11,11 +11,40 @@ export type FormDataLogin = {
 
 }
 export type ProductType = {
-    id: number;
-    title: string;
-    price: number;
-    category: string;
-    description: string;
-    image: string;
-  };
-  
+    onClick?: () => void;
+    category: {
+        name: string;
+        icon: string;
+    };
+    readonly id: string;
+    name: string;
+    desc: string;
+    image ?: string;
+    price: string;
+    quantity: string;
+    seller: string;
+  }
+  export type FormDataUpdate = {
+    readonly id: number;
+    category: {
+        name: any;
+    };
+    name: string;
+    desc: string;
+    image ?: string;
+    price: string;
+    quantity: string;
+    seller: string;
+}
+export type FormDataCreate = {
+    category: {
+        name: string;
+        icon: string;
+    };
+    name: string;
+    desc: string;
+    image ?: string;
+    price: string;
+    quantity: string;
+}
+

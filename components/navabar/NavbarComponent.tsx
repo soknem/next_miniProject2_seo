@@ -39,18 +39,19 @@ function NavbarComponent() {
     <Navbar theme={customTheme.navbar} className="sticky top-0 z-50">
       <NavbarBrand as={Link} href="/">
         <img
-          src="/istad logo.png"
+          src="/"
           className="mr-3 h-6 sm:h-9"
           alt="Flowbite React Logo"
         />
         <span className="self-center whitespace-nowrap text-xl font-semibold tracking-widest">
-          CSTAD
+          ECOMERCE
         </span>
       </NavbarBrand>
       <NavbarToggle />
       <NavbarCollapse>
         {menu.map((item, index) => (
           <NavbarLink
+          key={index}
             onClick={() => updateMenuList(item.path)}
             as={Link}
             href={item.path}
