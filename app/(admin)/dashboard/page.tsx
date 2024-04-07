@@ -109,7 +109,7 @@ export default function Dashboard() {
   };
 
   return (
-    <div className="w-full h-auto min-h-full ">
+    <div className="w-full  ">
       <DataTable
       customStyles={customStyles}
         columns={columns}
@@ -119,8 +119,8 @@ export default function Dashboard() {
         paginationServer
         paginationTotalRows={totalPages * rowsPerPage}
         onChangePage={handlePageChange}
-        onChangeRowsPerPage={handleRowsPerPageChange} // Handle rows per page change event
-        paginationRowsPerPageOptions={[10,15, 20,25, 30,35,40]} // Options for rows per page
+        onChangeRowsPerPage={handleRowsPerPageChange} 
+        paginationRowsPerPageOptions={[10,15, 20,25, 30,35,40]}
         pointerOnHover
         highlightOnHover
         striped

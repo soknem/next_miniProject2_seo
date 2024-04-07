@@ -1,4 +1,4 @@
-import { HiChartPie, HiUserAdd, HiHome } from 'react-icons/hi';
+import { HiChartPie, HiUserAdd, HiHome, } from 'react-icons/hi';
 export const MenuList = [
   {
     name: "Dashboard",

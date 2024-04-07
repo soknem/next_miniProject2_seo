@@ -3,7 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import style from "./style.module.css";
 import { useReducer, useState } from "react";
-import { Router, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 const BaseUrl = "https://store.istad.co";
 const AccessToken =
@@ -77,7 +77,7 @@ const validationSchema = Yup.object().shape({
 });
 
 export default function Product() {
-    const router=useRouter();
+  const router = useRouter();
   const handleUploadeIcon = async (
     file: any,
     name: any,
@@ -110,8 +110,7 @@ export default function Product() {
     });
 
     const data = await res.json();
-
-    console.log("product uploade: ", data);
+    router.push("/dashboard")
   };
 
   return (
@@ -120,7 +119,6 @@ export default function Product() {
         initialValues={initialValues}
         validationSchema={validationSchema}
         onSubmit={async (values) => {
-        
           const fileIcon = values.fileIcon;
           const categoryIcon = await handleUploadeIcon(
             fileIcon,
@@ -128,7 +126,6 @@ export default function Product() {
             "category"
           );
 
-         
           const fileProduct = values.fileProduct;
           const productImage = await handleUploadeIcon(
             fileProduct,
@@ -136,7 +133,6 @@ export default function Product() {
             "product"
           );
 
-      
           const productPost: ProductPostType = {
             category: {
               name: values.categoryName,
@@ -284,17 +280,16 @@ export default function Product() {
             </div>
 
             <section className="flex justify-between mx-2">
-            <button
+              <button
                 type="button"
                 className={`${style.cancel}`}
-                onClick={()=> router.push("/dashboard")}
+                onClick={() => router.push("/dashboard")}
               >
                 Cancel
               </button>
-              <button type="submit" className={`${style.button}`}>
+              <button type="submit" className={`${style.button}`} >
                 Submit
               </button>
-             
             </section>
           </Form>
         )}

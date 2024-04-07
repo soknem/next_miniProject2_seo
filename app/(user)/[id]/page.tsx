@@ -18,7 +18,7 @@ async function getData(id: string) {
 const Page = async (props: PropsType) => {
   let data = await getData(props.params.id);
   return (
-    <div className="relative w-full h-screen mt-[-80px] pt-[30px] flex justify-center items-center bg-green-300">
+    <div className="w-full  h-auto  min-h-screen bg-green-200">
       <CardDetailComponent
         name={data.name}
         price={data.price}

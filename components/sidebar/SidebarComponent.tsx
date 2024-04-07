@@ -13,9 +13,9 @@ type MenuItem = {
 export default function SideComponent() {
   const [menuList, setMenuList] = useState<MenuItem[]>(MenuList);
   return (
-    <Sidebar theme={customTheme.sidebar} aria-label="Sidebar with logo branding example">
+    <Sidebar className="w-[200px]" theme={customTheme.sidebar} aria-label="Sidebar with logo branding example">
       <Sidebar.Logo href="#" img="https://store.istad.co/media/product_images/shool_logo3.png" imgAlt="Flowbite logo">
-        EXStore
+        ESA Store
       </Sidebar.Logo>
       <Sidebar.Items>
         <Sidebar.ItemGroup>

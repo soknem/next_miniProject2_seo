@@ -15,7 +15,7 @@ function CartProductComponent({ name, image, price, onClick }: PropsType) {
   return (
     <Card
       onClick={onClick}
-      className="max-full h-auto min-h-[250px] max-h-[400px] hover:scale-[103%] duration-150 bg-gray-50"
+      className="max-full h-auto min-h-[250px] max-h-[400px] hover:scale-[103%] hover:border hover:border-cyan-200 hover:shadow-md hover:shadow-orange-300 duration-150 bg-gray-50"
       renderImage={() => (
         <img
           className=" object-contain w-full h-full overflow-hidden mx-auto p-1"

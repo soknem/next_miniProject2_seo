@@ -43,7 +43,7 @@ export const customTheme: CustomFlowbiteTheme = {
       },
     },
     toggle: {
-      base: "inline-flex items-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 md:hidden",
+      base: "ml-auto inline-flex items-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 md:hidden",
       icon: "h-6 w-6 shrink-0",
     },
   },
@@ -148,10 +148,10 @@ export const customTheme: CustomFlowbiteTheme = {
         on: "w-16",
         off: "w-64"
       },
-      inner: "h-full overflow-y-auto overflow-x-hidden rounded bg-gray-50 px-3 py-4 dark:bg-gray-800"
+      inner: "h-full  overflow-y-auto overflow-x-hidden rounded bg-cyan-50 px-3 py-4 dark:bg-gray-800"
     },
     collapse: {
-      button: "group flex w-full items-center rounded-lg p-2 text-base font-normal text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700",
+      button: "group flex w-full items-center rounded-lg p-2 text-base font-normal text-gray-900 transition duration-75 hover:bg-gray-00 dark:text-white dark:hover:bg-gray-700",
       icon: {
         base: "h-6 w-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white",
         open: {

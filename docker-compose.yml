@@ -1,0 +1,19 @@
+version: '3'
+services:
+  soknem:
+    image: soknem
+    container_name: nem
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 3211:3000
+    environment:
+      - NODE_ENV=production
+      - GENERATE_SOURCEMAP=false
+    networks:
+      - data_analytics
+networks:
+    data_analytics:
+      external: true
