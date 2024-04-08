@@ -85,7 +85,7 @@ export default function Dashboard() {
   };
 
   const handleUpdate = (product: ProductType) => {
-    router.push(`/update/${product.id}`);
+
   };
 
   const handlePageChange = (page: number) => {
